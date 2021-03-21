@@ -9,41 +9,29 @@ function writePassword() {
   
   passwordText.value = password;
 }
-writePassword()
+
 // Add event listener to generate button
-function generatePassword() {
-  var passwordLength = prompt("What character length does your password need to be? (*At least 8 and no more than 128 characters.");
-  console.log(passwordLength)
-  if(passwordLength < 8) {
-    alert("Must be more than 8 characters.");
-  }
-
-
-  // var confirmLength = alert(passwordLength + " characters.")
-    // return("My password")
-    
-
-  //   console.log(passwordLength)
-  // var passwordLowercase = confirm("Do you want any lowercase letters?");
-  // var confirmLowercase = alert(passwordLowercase + " characters.")
-  //   console.log(passwordLowercase)
-  // var passwordUppercase = confirm("Do you want any uppercase letters?");
-
-  //   console.log(passwordUppercase)
-  // var passwordNumeric = confirm("Do you want any numbers?");
-
-  //   console.log(passwordNumeric)
-  // var passwordSpecial = confirm("Do you want any special characters?");
-
-  //   console.log(passwordSpecial)
- 
-  
-  // return "My password"
-}
-
-// generatePassword()
-
-// this starts things off calling on function "writePassword"
 generateBtn.addEventListener("click", writePassword);
 
+function generatePassword() {
+  var passwordLength = prompt("How many characters do you want your password to contain?");
+  console.log(passwordLength)
+  if (passwordLength < 8 || passwordLength > 128) {
+    alert("Password cannot be less than 8 characters or greater than 128 characters")
+    prompt("How many characters do you want your password to contain?")
+  } 
 
+  var passwordLowercase = confirm("Do you want any lowercase letters?");
+  console.log(passwordLowercase)
+ 
+  var passwordUppercase = confirm("Do you want any uppercase letters?");
+   console.log(passwordUppercase)
+ 
+  var passwordNumeric = confirm("Do you want any numbers?");
+   console.log(passwordNumeric)
+ 
+  var passwordSpecial = confirm("Do you want any special characters?");
+  console.log(passwordSpecial)
+}
+
+// this starts things off calling on function "writePassword"
