@@ -1,6 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var chosenCount = generatePassword.passwordLength;
+var passwordLetters = "abcdefghijklmnopqrstuvwxyz";
+var passwordNumbers = "0123456789"
+var passwordSpecialChar = "!@#$%^&*"
 
 // Write password to the #password input
 function writePassword() {
